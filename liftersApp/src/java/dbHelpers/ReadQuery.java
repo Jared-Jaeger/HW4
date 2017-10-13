@@ -55,7 +55,7 @@ public class ReadQuery {
     }
     public void doRead(){
         try {
-            String query = "select * from Lifters";
+            String query = "select * from Lifters ORDER BY LIFTERID ASC";
             
             PreparedStatement ps = conn.prepareStatement(query);
             this.results = ps.executeQuery();
@@ -70,6 +70,16 @@ public class ReadQuery {
        String table = "";
        
        table+= "<table border=1>";
+       table+= "<thead>";
+       table+= "<tr>";
+       table+= "<th> Lifter ID </th>";
+       table+= "<th> Lifter Name </th>";
+       table+= "<th> Lifter Age </th>";
+       table+= "<th> Lifter Weight </th>";
+       table+= "<th> Lifter Height </th>";
+       table+= "<th> Lifter Class </th>";
+       table+= "</tr>";        
+       table+= "</thead>";
         try {
             while(this.results.next()){
                 
@@ -110,6 +120,11 @@ public class ReadQuery {
                 
                 table += "<td>";
                 table+= lifter.getLifterClass();
+                
+                table += "</td>";
+                
+                table += "<td>";
+                table+= "<a href=delete?lifterID=" + lifter.getLifterID() + "> Delete </a>";
                 
                 table += "</td>";
                 

@@ -5,7 +5,7 @@
  */
 package controller;
 
-import dbHelpers.AddQuery;
+import dbHelpers.DeleteQuery;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -14,14 +14,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Lifters;
 
 /**
  *
  * @author itzjs
  */
-@WebServlet(name = "AddServlet", urlPatterns = {"/addLifter"})
-public class AddServlet extends HttpServlet {
+@WebServlet(name = "DeleteServlet", urlPatterns = {"/delete"})
+public class DeleteServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -39,10 +38,10 @@ public class AddServlet extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet AddServlet</title>");            
+            out.println("<title>Servlet DeleteServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet AddServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet DeleteServlet at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -60,7 +59,7 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-     doPost(request, response);
+        doPost(request,response);
     }
 
     /**
@@ -74,28 +73,17 @@ public class AddServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
+            int lifterID = Integer.parseInt(request.getParameter("lifterID"));
         
-        String name = request.getParameter("name");
-        int age = Integer.parseInt(request.getParameter("age"));
-        int weight = Integer.parseInt(request.getParameter("weight"));
-        String height = request.getParameter("height");
-        String lclass = request.getParameter("lclass");
-        
-        Lifters lifter = new Lifters();
-        lifter.setLifterName(name);
-        lifter.setLifterAge(age);
-        lifter.setLifterWeight(weight);
-        lifter.setLifterHeight(height);
-        lifter.setLifterClass(lclass);
-        
-        AddQuery aq = new AddQuery();
-        
-        aq.doAdd(lifter);
-        
-        String url ="/read";
-        
-        RequestDispatcher dispatcher = request.getRequestDispatcher(url);
-        dispatcher.forward (request, response);
+            DeleteQuery dq = new DeleteQuery();
+            
+            dq.doDelete(lifterID);
+            
+            String url = "/read";
+            
+            RequestDispatcher dispatcher = request.getRequestDispatcher(url);
+            dispatcher.forward (request, response);
     }
 
     /**
