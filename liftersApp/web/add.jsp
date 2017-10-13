@@ -10,9 +10,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Add A New Lifter</title>
+        <link rel="stylesheet" type="text/css" href="CSS_Formating.css"/>
     </head>
     <body>
+        <div class ="centerAlign">
         <h1>Add A New Lifter</h1>
+        <hr class="style18">
         
         <form name="addForm" action="addLifter" method="get">
         
@@ -38,6 +41,6 @@
             
             <input type="submit" name="submit" value="Submit" />
     
-            
+        </div>
     </body>
 </html>

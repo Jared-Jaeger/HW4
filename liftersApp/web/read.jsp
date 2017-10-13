@@ -5,6 +5,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Iowa City Lifters</title>
+        <link rel="stylesheet" type="text/css" href="CSS_Formating.css"/>
     </head>
     
     <% String table = (String) request.getAttribute("table"); %>

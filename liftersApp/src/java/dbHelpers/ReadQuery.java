@@ -78,6 +78,7 @@ public class ReadQuery {
        table+= "<th> Lifter Weight </th>";
        table+= "<th> Lifter Height </th>";
        table+= "<th> Lifter Class </th>";
+       table+= "<th> Delete </th>";
        table+= "</tr>";        
        table+= "</thead>";
         try {

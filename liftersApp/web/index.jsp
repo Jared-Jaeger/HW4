@@ -8,5 +8,6 @@
     <body>
         <h1>Database of Iowa City Lifters</h1>
         <a href="read">View All Lifters</a>
+        <link rel="stylesheet" type="text/css" href="CSS_Formating.css"/>
     </body>
 </html>
