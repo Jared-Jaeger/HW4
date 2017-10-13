@@ -1,14 +1,14 @@
 body{ background:#D2B48C;font-family:"Comic Sans MS"; }
 table {
     border-collapse: collapse;
-}
-
-table, th, td {
-    border: 1px solid #FFFFFF;
-}
-
-table {
     width: 100%;
+    background-color: white;
+    padding: 15px;
+    border: 10px solid white;
+}
+
+th, td {
+    border: 1px solid #FFFFFF;
 }
 
 th {
@@ -16,6 +16,7 @@ th {
     text-align: center;
     background-color: #FFFF99;
     color: #696969;
+    vertical-align: middle;
 }
 
 tr {
@@ -24,6 +25,7 @@ tr {
 td {
     height: 50px;
     vertical-align: middle;
+     text-align: center;
     
 }
 tr:nth-child(even) {background-color: #F08080}
