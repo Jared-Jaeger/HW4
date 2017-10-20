@@ -84,10 +84,16 @@ public class SearchQuery {
        table+= "<th> Lifter Weight </th>";
        table+= "<th> Lifter Height </th>";
        table+= "<th> Lifter Class </th>";
-       table+= "<th> Delete </th>";
+       table+= "<th> Function </th>";
        table+= "</tr>";        
        table+= "</thead>";
         try {
+            if(!this.results.isBeforeFirst()){
+                table += "<tr>";
+                table += "<td colspan='6'> Sorry, This Lifter does not exist in the database</td>";
+                table += "</tr>";
+            }
+            else{
             while(this.results.next()){
                 
                 Lifters lifter = new Lifters();
@@ -136,7 +142,7 @@ public class SearchQuery {
                 table += "</td>";
                 
                 table += "</tr>";
-                
+            }
                 
                 
             }} catch (SQLException ex) {

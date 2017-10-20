@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/src/java/dbHelpers/DeleteQuery.java</file>
-            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/src/java/dbHelpers/dbConn.properties</file>
-            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/web/CSS_Formating.css</file>
+            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/web/index.jsp</file>
+            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/web/add.jsp</file>
+            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/web/read.jsp</file>
+            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/web/updateForm.jsp</file>
+            <file>file:/C:/Users/itzjs/Desktop/HW4/liftersApp/web/search.jsp</file>
         </group>
     </open-files>
 </project-private>
